@@ -60,6 +60,15 @@ const styles = StyleSheet.create({
     borderColor: "#0062cc",
     borderWidth: 2,
   },
+  
+  unsplashImageStyle: {
+    width: 400,
+    height: 300,
+    margin: 10,
+    padding: 5,
+  
+   
+  },
 
 
 
