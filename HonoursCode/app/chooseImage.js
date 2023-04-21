@@ -35,7 +35,7 @@ export default function ImageProcessing() {
 
   async function unsplashAPI() {
   
-    const splashData = await fetch("https://api.unsplash.com/search/photos?page=1&query=mountain&client_id=sqWD3jYgfh5zNQORs-t7p6QmYsWBp8J-3xccCwNIBnQ");  
+    const splashData = await fetch("https://api.unsplash.com/search/photos?page=1&query=dog&client_id=sqWD3jYgfh5zNQORs-t7p6QmYsWBp8J-3xccCwNIBnQ");  
     const fetchedSplashData = await splashData.json();
     const result = fetchedSplashData.results;
     setSplashImages(result);
@@ -61,18 +61,14 @@ export default function ImageProcessing() {
 
         {shouldShow ? (
           <View>
-      
-                  
                   <Text style={styles.textBody}>We Found (modelResultsHere) in your image, Here are some images of (modelResultsHere) from Unsplash:</Text>
 
-                  <Image source={{ uri: splashImages[0].urls.regular }} style={styles.imageStyle} />
-                  <Image source={{ uri: splashImages[1].urls.regular }} style={styles.imageStyle} />
-                  <Image source={{ uri: splashImages[2].urls.regular }} style={styles.imageStyle} />
-                  <Image source={{ uri: splashImages[3].urls.regular }} style={styles.imageStyle} />
-                  <Image source={{ uri: splashImages[4].urls.regular }} style={styles.imageStyle} />
-                  <Image source={{ uri: splashImages[5].urls.regular }} style={styles.imageStyle} />
-
-
+                  <Image source={{ uri: splashImages[0].urls.regular }} style={styles.unsplashImageStyle} />
+                  <Image source={{ uri: splashImages[1].urls.regular }} style={styles.unsplashImageStyle} />
+                  <Image source={{ uri: splashImages[2].urls.regular }} style={styles.unsplashImageStyle} />
+                  <Image source={{ uri: splashImages[3].urls.regular }} style={styles.unsplashImageStyle} />
+                  <Image source={{ uri: splashImages[4].urls.regular }} style={styles.unsplashImageStyle} />
+                  <Image source={{ uri: splashImages[5].urls.regular }} style={styles.unsplashImageStyle} />
           </View>
            
         ) : null}
